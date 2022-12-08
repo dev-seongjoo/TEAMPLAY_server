@@ -1,0 +1,318 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Chat {
+  id: String!
+  content: String!
+  createdAt: DateTime!
+  chatRoom: ChatRoom!
+  user: User!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type ChatRoom {
+  id: String!
+  name: String!
+  project: Project!
+  chat: [Chat!]!
+  chatRoomMembers: [ChatRoomMember!]!
+  deletedAt: DateTime
+}
+
+type ChatRoomMember {
+  id: String!
+  createdAt: DateTime!
+  chatRoom: ChatRoom!
+  user: User!
+}
+
+type ProjectMember {
+  id: String!
+  user: User!
+  project: Project!
+}
+
+type Tendency {
+  id: String!
+  name: String!
+  users: [User!]!
+}
+
+type Type {
+  id: String!
+  name: String!
+  users: [User!]!
+}
+
+type Task {
+  id: String!
+  content: String!
+  limit: DateTime!
+  taskType: TASK_TYPE_ENUM!
+  is_complete: Boolean!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  deletedAt: DateTime!
+  project: Project!
+  user: User!
+  users: [User!]!
+}
+
+enum TASK_TYPE_ENUM {
+  DESIGN
+  DEVELOPMENT
+  PLANNING
+}
+
+type User {
+  id: String!
+  email: String!
+  name: String!
+  createdAt: DateTime!
+  deletedAt: DateTime
+  career: CAREER_ENUM
+  point: Int!
+  imgUrl: String
+  tendencys: [Tendency!]
+  position: Position
+  types: [Type!]
+  tasks: [Task!]
+  chatRoomMembers: [ChatRoomMember!]!
+  boards: [Board!]
+  projectMembers: [ProjectMember!]
+}
+
+enum CAREER_ENUM {
+  STUDENT
+  JOBSEEKER
+  NEWCOMER
+}
+
+type Board {
+  id: String!
+  title: String!
+  content: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  deletedAt: DateTime!
+  user: User!
+  project: Project!
+}
+
+type Region {
+  id: String!
+  name: String!
+}
+
+type Location {
+  id: String!
+  name: String!
+  region: Region!
+}
+
+type Platform {
+  id: String!
+  name: String!
+  projects: [Project!]!
+}
+
+type Qna {
+  id: String!
+  qnaType: QNA_TYPE_ENUM!
+  title: String!
+  content: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  deletedAt: DateTime!
+  user: User!
+  project: Project!
+}
+
+enum QNA_TYPE_ENUM {
+  QUESTION
+  ANSWER
+}
+
+type Review {
+  id: String!
+  title: String!
+  content: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  deletedAt: DateTime!
+  user: User!
+  project: Project!
+}
+
+type Project {
+  id: String!
+  name: String!
+  teamname: String!
+  intro: String!
+  method: METHOD_ENUM!
+  recruitDate: DateTime!
+  imgUrl: String!
+  skill: String!
+  description: String!
+  isComplete: Boolean!
+  isStart: Boolean!
+  point: Int!
+  type: Type!
+  location: Location!
+  leader: User!
+  projectToPositions: [ProjectToPosition!]!
+  platforms: [Platform!]!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  deletedAt: DateTime!
+  boards: [Board!]
+  tasks: [Task!]
+  qnas: [Qna!]
+  reviews: [Review!]
+  projectMembers: [ProjectMember!]
+}
+
+enum METHOD_ENUM {
+  MEET
+  UNTACT
+  MEDIATE
+}
+
+type ProjectToPosition {
+  id: String!
+  project: Project!
+  position: Position!
+  number: Int!
+}
+
+type Position {
+  id: String!
+  name: String!
+  projectToPositions: [ProjectToPosition!]!
+}
+
+type Token {
+  accessToken: String!
+  onboarding: Boolean
+}
+
+type PointPayment {
+  id: String!
+  impUid: String
+  amount: Int!
+  status: POINT_PAYMENT_STATUS_ENUM!
+}
+
+enum POINT_PAYMENT_STATUS_ENUM {
+  PAYMENT
+  CANCEL
+}
+
+type Query {
+  fetchChatRooms: [ChatRoom!]!
+  fetchChats(chatRoomId: String!): [Chat!]!
+  fetchChatRoomMembers(chatRoomId: String!): [ChatRoomMember!]!
+  fetchLocations: [Location!]!
+  fetchPlatforms: [Platform!]!
+  fetchPositions: [Position!]!
+  fetchProjects(page: Float!): [Project!]!
+  fetchProject(projectId: String!): Project!
+  fetchProjectAll: [Project!]!
+  fetchProjectCounts: Int!
+  searchProjects(search: String!): [Project!]!
+  fetchRegions: [Region!]!
+  fetchTasks(projectId: String!): [Task!]!
+  fetchTask(taskId: String!): Task!
+  progressRatio(projectId: String!): Int!
+  fetchTendencys: [Tendency!]!
+  fetchTypes: [Type!]!
+  fetchUser: User!
+  fetchUsers(page: Float!): [User!]!
+  fetchBoards(projectId: String!): [Board!]!
+  fetchBoard(boardId: String!): Board!
+  fetchQnas(projectId: String!): [Qna!]!
+  fetchQna(qnaId: String!): Qna!
+  fetchReviews(projectId: String!): [Review!]!
+  fetchReview(reviewId: String!): Review!
+}
+
+type Mutation {
+  login(email: String!, password: String!): Token!
+  restoreAccessToken: Token!
+  logout: String!
+  joinChatRoom(projectId: String!): ChatRoomMember!
+  sendMessage(message: String!, chatRoomId: String!): String!
+  uploadFile(files: [Upload!]!): [String!]!
+  createLocation(name: String!): Location!
+  createPlatform(name: String!): Platform!
+  createPointPayment(impUid: String!, amount: Float!): PointPayment!
+  cancelPointPayment(impUid: String!): PointPayment!
+  createPosition(name: String!): Position!
+  createProject(createProjectInput: CreateProjectInput!): Project!
+  startProject(chatRoomId: String!, userIds: [String!]!, point: Float!): Project!
+  endProject(projectId: String!): Boolean!
+  deleteAllProject: Boolean!
+  deleteProject(projectId: String!): Boolean!
+  createRegion(name: String!): Region!
+  createTask(projectId: String!, content: String!, limit: DateTime!, taskType: TASK_TYPE_ENUM!, userIds: [String!]!): Task!
+  updateTask(taskId: String!, content: String!, limit: DateTime!, taskType: TASK_TYPE_ENUM!, userIds: [String!]!): Task!
+  deleteTask(taskId: String!): Boolean!
+  completeTask(taskId: String!): Task!
+  notCompleteTask(taskId: String!): Task!
+  createTendency(name: String!): Tendency!
+  createType(name: String!): Type!
+  sendTokenToEmail(email: String!): String!
+  checkTokenToEmail(email: String!, token: String!): Boolean!
+  createUser(createUserInput: CreateUserInput!): User!
+  updateUserByOnboard(updateUserOnboardInput: UpdateUserOnboardInput!): User!
+  updateUser(name: String!, password: String!, changePassword: String!): User!
+  deleteUser: Boolean!
+  deleteUserHard(email: String!): Boolean!
+  createBoard(projectId: String!, title: String!, content: String!): Board!
+  updateBoard(boardId: String!, title: String!, content: String!): Board!
+  deleteBoard(boardId: String!): Boolean!
+  createQna(projectId: String!, title: String!, content: String!, qnaType: QNA_TYPE_ENUM!): Qna!
+  updateQna(qnaId: String!, title: String!, content: String!): Qna!
+  deleteQna(qnaId: String!): Boolean!
+  createReview(projectId: String!, title: String!, content: String!): Review!
+  updateReview(reviewId: String!, title: String!, content: String!): Review!
+  deleteReview(reviewId: String!): Boolean!
+}
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload
+
+input CreateProjectInput {
+  name: String!
+  teamname: String!
+  intro: String!
+  method: METHOD_ENUM!
+  recruitDate: DateTime!
+  imgUrl: String!
+  skill: String!
+  description: String!
+  typeId: String!
+  locationId: String!
+  positionIds: [String!]!
+  numbers: [Int!]!
+  platformIds: [String!]!
+}
+
+input CreateUserInput {
+  email: String!
+  name: String!
+  password: String!
+}
+
+input UpdateUserOnboardInput {
+  career: CAREER_ENUM
+  imgUrl: String
+  tendencyId: [String!]!
+  positionId: String!
+  typeId: [String!]!
+}

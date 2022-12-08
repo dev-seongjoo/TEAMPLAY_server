@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>결제페이지</title>
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+    ></script>
+    <!-- iamport.payment.js -->
+    <script
+      type="text/javascript"
+      src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/axios/dist/axios.min.js"
+    ></script>
+    <script>
+      function mypayment22() {
+        const myAmount = Number(document.getElementById("aaa").value);
+
+        IMP.init("imp17660255"); // 예: imp00000000
+        IMP.request_pay(
+          {
+            // param
+            pg: "html5_inicis",
+            pay_method: "card",
+            name: "노르웨이 회전 의자",
+            amount: myAmount,
+            buyer_email: "gildong@gmail.com",
+            buyer_name: "홍길동",
+            buyer_tel: "010-4242-4242",
+            buyer_addr: "서울특별시 강남구 신사동",
+            buyer_postcode: "01181",
+          },
+          async function (rsp) {
+            // callback
+            if (rsp.success) {
+              alert("결제에 성공했습니다!");
+              console.log("결제 결과: ", rsp);
+              //   ...,
+              // 결제 성공 시 로직,
+              //   ...
+
+              const data = await axios.post(
+                "http://localhost:3000/graphql",
+                {
+                  query: `
+                      mutation {
+                        createPointPayment(impUid: "${rsp.imp_uid}", amount: ${rsp.paid_amount}) {
+                          id
+                        }
+                      }
+                    `,
+                },
+                {
+                  headers: {
+                    Authorization:
+                      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImlhbXNlb25nam9vQGdtYWlsLmNvbSIsInN1YiI6ImQ3MGY5MTMwLTViNGItNGNmNC05ZWY3LWNhMGM1MTJlYWM5NSIsImlhdCI6MTY0ODgwNTM2MSwiZXhwIjoxNjQ4ODA4OTYxfQ.HRs03vidDV9h91qdOfbnt7OtG6m-gx7RDymJI1RBhZs",
+                  },
+                }
+              );
+              // {
+              //     "query": "mutation createPointTransaction(impUid:" + bbb ", amount: 500){ id }"
+              // }
+            } else {
+              //   ...,
+              // 결제 실패 시 로직,
+              //   ...
+            }
+          }
+        );
+      }
+    </script>
+  </head>
+  <body>
+    결제할금액: <input type="text" id="aaa" />
+    <button onclick="mypayment22()">결제하기</button>
+  </body>
+</html>

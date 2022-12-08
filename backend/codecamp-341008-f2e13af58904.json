@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "codecamp-341008",
+  "private_key_id": "f2e13af58904d3eea6f6cd73f2f3ff5360e13a19",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDZKVEGXldDR1xO\nE6BTAdomq2/XWlohHX58Wykt4mfzRAEJkO/nxXYI0O9dVOhffwG8hGbvbOOjyuvD\n+/H0LeT4jk/dlYXQR8Sg3oACAy0zlMU3dD5MFDK+3s6NlwyRNmrIDBdb6NrpSUq3\nO72/ocYnjMl1WgpfOxGhYXG4opTGuCD91f2vFGPzRI/d9/iGKNrFgz6p7LHhkdGA\ngPT849g0XmTcpQ3OUk0vHlLd4AGi/bhFcSPc8kWg/BB3EVLOWs5pXRE4u/Txp1iZ\ncvWi4pl+rvVfoOTbTjOrJpbV6PJyBebMGZVGuX764K/sUkmU6IwP2y9/+Pa7E0Ts\nZIVUxH0lAgMBAAECggEAM0uzpG33beB22MiBB+p5lcXMItHoVUcqwAQmi3yd8lP/\nbLuMN7KoaXe0+tZaF2igR9/8kpSlhuShYUdrhTKsEdxH2D7//01ckGVOVmtaq4L6\nPNmb94uT2ws1PjPOV6TDf2J/yAmOYCmcWQDnFtOHQ4NZePteVNVWmkiyvJrGytN2\nz5gmCkWyvVIPSRx1Do/1seEXnbpaveHJINZOQ8YbuXjjJ8pd4YhhPUDErRxTrPIr\naZJLP1j6CFbxkPYt1pNr4R/GqCvC5F/wV/5FDPIZCxtrnD4or/8SFb6oEyJUmLTQ\nfDrxOZtud3D9PR5jWCB2KITRdhqWktf6DqBJ/uCYhwKBgQD/88Ago2iyUYhjS/Iv\nkdsZ5Q1d01u6i5B/vCLPDECDQo9qhGTCSu+TYu7Wx1dNHlViwK3jVqp3PFtNmWhq\n0M0TcH7JzEItI+M23oCM9uPaTK6OVZUjqrqaAJNVNwI15OGJB6HBuPzM7+p3yvOP\n5Ka+pEIgE1rMYnqtkZNqtDcNewKBgQDZM7WkHlZBb8fBqANAhjeSuZGxh2moirU5\newTwIsFayf52K5v9S5G2AilzLTbgK9LekIAhsoV3VmG9kT0SelZIYxDefU/IrZAx\no9FxGAdHtE4QikTTI1WgcxLCUqatSYHpnH3Bb8chCnMrWpG1lkwZp+iR9bmH9nks\nNdOEMjmN3wKBgQD83uj2VfteEUdaMvI3JTb+QloOVH7Psos0Z79MJ6KlC+F9LwgN\nHNPNHXUyJQePXWSmiA5ECJ+p5aue4u1Seq/hgMcCwBaxWj9lOjZvDozWY+QhI1SR\nRF/PPrpQ+mPosxRPuYaKSiUYo/9WEuDHTPOgbdAWuIiAXNsvGCA4z4uEeQKBgQCB\n3Pjtd3X7CepVTy8ilR0FDQ6fJmd17fkMtRDuwtj4f201Gj3Z5CTqvcAqrQ3yWkFp\n8NurSiGiiHNH9F6ffaW5AgJEBIh/Y8ai51+CTuuLY7KJESK1WpsHo8XDicc+NIUI\nOBi4XyygBK93bF9SQtqdPFdBbbnQIP2yATzF/YGL4QKBgHZqwOfFcjkzvA7WWPVo\nxLVItuzQMxvrgM3sf0p44SwMjvisHy2I4naQpyZ23eXdvugPEXrftQkHojS2tgxw\ngV24hYiKGWcRVdcyW6bi3lytFEZZU6ypF61s8iKaxqmWDahAp9vV8e+gZhNstk4P\nlEePwXa1iLNSniQljDNAUeLq\n-----END PRIVATE KEY-----\n",
+  "client_email": "codecamp-341008@appspot.gserviceaccount.com",
+  "client_id": "115827244783963764316",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/codecamp-341008%40appspot.gserviceaccount.com"
+}

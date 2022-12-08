@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.socket.io/4.4.1/socket.io.min.js"
+      integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+    <!-- <script src="main.js" defer></script> -->
+    <title>채팅테스트</title>
+  </head>
+  <body>
+    <h1>this is test title</h1>
+    <div id="welcome">
+      <form>
+        <input required type="text" id="roomName" placeholder="room name" />
+        <input required placeholder="nickname" type="text" id="nick" />
+        <button type="submit">confirm</button>
+      </form>
+      <h4>open rooms:</h4>
+      <ul></ul>
+    </div>
+    <div id="room">
+      <h3></h3>
+      <ul></ul>
+      <for id="msg">
+        <input type="text" required, type="text" placeholder="message" />
+        <button type="submit">send</button>
+      </for>
+    </div>
+    <script>
+      const socket = io('http://localhost:8080');
+
+      // const welcome = document.getElementById('welcome');
+      // const form = welcome.querySelector('form');
+      // const room = document.getElementById('room');
+
+      // let roomName;
+
+      // room.hidden = true;
+
+      // function addMessage(message) {
+      //   const ul = room.querySelector('ul');
+      //   const li = document.createElement('li');
+      //   li.innerText = message;
+      //   ul.appendChild(li);
+      // }
+
+      // function handleMessageSubmit(event) {
+      //   event.preventDefault();
+      //   const input = room.querySelector('input');
+      //   console.log(input.value);
+      //   const roomName = form.querySelector('#roomName');
+      //   socket.emit('new_message', input.value, roomName.value, () => {
+      //     addMessage(`you: ${input.value}`);
+      //     input.value = '';
+      //   });
+      // }
+
+      // function handleNcknameSubmit(event) {
+      //   event.preventDefault();
+      //   const input = form.querySelector('#nick input');
+      //   socket.emit('nickname', input.value);
+      // }
+
+      // function showRoom(roomName) {
+      //   welcome.hidden = true;
+      //   room.hidden = false;
+      //   const h3 = room.querySelector('h3');
+      //   console.log('front side', roomName);
+      //   h3.innerText = `room ${roomName}`;
+      //   const msgForm = room.querySelector('#msg');
+      //   const nameForm = form.querySelector('#nick');
+      //   msgForm.addEventListener('submit', handleMessageSubmit);
+      //   nameForm.addEventListener('submit', handleNcknameSubmit);
+      // }
+
+      // function handleRoomSubmit(event) {
+      //   const roomNameInput = form.querySelector('#roomName');
+      //   const nicknameInput = form.querySelector('#nick');
+      //   event.preventDefault();
+
+      //   const roomName = roomNameInput.value;
+      //   const userId = '123123';
+      //   const nickName = nicknameInput.value;
+      //   console.log(roomName, nickName, userId, socket.id);
+      //   //emit하고 항상 메시지를 보낼필욘없다. 지금과 같이 이벤트를 정의해서 넘겨 줄수있는데 'room'이라는 이벤트를 정의해서 payload에 input.value값을 담아 넘겨주었다.
+      //   // 프론트 사이드에서 보내주는 emit 이벤트 이름과 서버에서 받는 on event이름이 같아야 서로 데이터를 주고받을수가있다.
+      //   socket.emit('enter_room', { roomName, nickName, userId, showRoom });
+      //   // socket.on("aaa", (roomId) => {
+      //   //   socket.join(roomId);
+      //   //   console.log(roomId);
+      //   // });
+      // }
+
+      // form.addEventListener('submit', handleRoomSubmit);
+
+      // //addMessage를 바로 호출하면 안됨 () => {addMessage('메시지')} 해줘야함
+      // // callback으로 불러와야됨
+      // socket.on('welcome', (user, roomName, newCount) => {
+      //   const h3 = room.querySelector('h3');
+      //   h3.innerText = `room ${roomName} (${newCount})`;
+      //   addMessage(`${user} joined!`);
+      // });
+
+      // socket.on('bye', (left, roomName, newCount) => {
+      //   const h3 = room.querySelector('h3');
+      //   h3.innerText = `room ${roomName} (${newCount})`;
+      //   addMessage(`${left} left`);
+      // });
+
+      // socket.on('new_message', msg => {
+      //   addMessage(msg);
+      // });
+
+      // socket.on('test', data => {
+      //   console.log(data);
+      // });
+
+      // socket.on('room_change', rooms => {
+      //   const roomList = welcome.querySelector('ul');
+      //   roomList.innerHTML = '';
+      //   if (rooms.length === 0) {
+      //     return;
+      //   }
+
+      //   rooms.forEach(room => {
+      //     const li = document.createElement('li');
+      //     li.innerText = room;
+      //     roomList.append(li);
+      //   });
+      // });
+    </script>
+  </body>
+</html>
