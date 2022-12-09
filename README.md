@@ -1,4 +1,4 @@
-# TEAMPLAY_server
+# 🔥 TEAMPLAY_server
 
 ### 💻 팀 프로젝트가 필요한 당신을 위한 플랫폼 !
 
@@ -125,7 +125,7 @@ ___
    <img src="https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white">
    <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
    <img src="https://img.shields.io/badge/graphql-E10098?style=for-the-badge&logo=graphql&logoColor=white">
-   <img src="https://img.shields.io/badge/axios-#5A29E4?style=for-the-badge&logo=axios&logoColor=white">
+   <img src="https://img.shields.io/badge/axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white">
    <img src="https://img.shields.io/badge/redis-DC382D?style=for-the-badge&logo=redis&logoColor=white">
    <img src="https://img.shields.io/badge/socket.io-010101?style=for-the-badge&logo=socket.io&logoColor=white">
    <img src="https://img.shields.io/badge/gcp-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white">
