@@ -103,3 +103,31 @@ ___
 <img width="100%" src="https://user-images.githubusercontent.com/109133448/206643655-e4cfb74c-7d31-4da3-ac8c-4bdf9d8cf58d.gif">
 </div>
 </details>
+   
+## 🔧 기술 스택
+### 💻 프론트엔드
+<p>
+   <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+   <img src="https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+   <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white">
+   <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+   <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">
+   <img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=next.js&logoColor=white">
+   <img src="https://img.shields.io/badge/Apollo GraphQL-311C87?style=for-the-badge&logo=Apollo GraphQL&logoColor=white">
+   <img src="https://img.shields.io/badge/gcp-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white">
+   <img src="https://img.shields.io/badge/notion-000000?style=for-the-badge&logo=notion&logoColor=white">
+</p>
+   
+### 💻 백엔드
+<p>
+   <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+   <img src="https://img.shields.io/badge/nestjs-E0234E?style=for-the-badge&logo=nestjs&logoColor=white">
+   <img src="https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white">
+   <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+   <img src="https://img.shields.io/badge/graphql-E10098?style=for-the-badge&logo=graphql&logoColor=white">
+   <img src="https://img.shields.io/badge/axios-#5A29E4?style=for-the-badge&logo=axios&logoColor=white">
+   <img src="https://img.shields.io/badge/redis-DC382D?style=for-the-badge&logo=redis&logoColor=white">
+   <img src="https://img.shields.io/badge/socket.io-010101?style=for-the-badge&logo=socket.io&logoColor=white">
+   <img src="https://img.shields.io/badge/gcp-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white">
+   <img src="https://img.shields.io/badge/notion-000000?style=for-the-badge&logo=notion&logoColor=white">
+</p>
