@@ -41,14 +41,65 @@ ___
 <details>
 <summary> 포인트 충전 </summary>
 <div markdown="1">
-<img width="100%" src="https://user-images.githubusercontent.com/109133448/206632586-25e34de8-c3c5-40fd-99da-e0ff4b16b250.gif">
+<img width="100%" src="https://user-images.githubusercontent.com/109133448/206642442-b13f7205-34fb-47dc-9556-6d62764be9e0.gif">
+</div>
+</details>
+   
+<details>
+<summary> 프로젝트 검색 </summary>
+<div markdown="1">
+<img width="100%" src="https://user-images.githubusercontent.com/109133448/206642627-54026fa7-e489-4935-88e4-836d1b2cf77f.gif">
+</div>
+</details>
+   
+<details>
+<summary> 프로젝트 참여 </summary>
+<div markdown="1">
+<img width="100%" src="https://user-images.githubusercontent.com/109133448/206642791-711a52e8-90c0-4506-8883-55ee828f3e34.gif">
+</div>
+</details>
+   
+<details>
+<summary> 프로젝트 생성 </summary>
+<div markdown="1">
+<img width="100%" src="https://user-images.githubusercontent.com/109133448/206642880-d0099aa1-e6cf-4742-8c9d-0b351213b6ee.gif">
+</div>
+</details>
+   
+<details>
+<summary> 채팅방 선택 및 일대일 채팅 </summary>
+<div markdown="1">
+<img width="100%" src="https://user-images.githubusercontent.com/109133448/206643150-775bcecc-0d8b-4a1a-95dd-dad8179584a0.gif">
+</div>
+</details>
+   
+   
+<details>
+<summary> 단체 채팅 </summary>
+<div markdown="1">
+<img width="100%" src="https://user-images.githubusercontent.com/109133448/206643237-6ecdcf93-175b-4add-b098-23b8373be863.gif">
+</div>
+</details>
+   
+   
+<details>
+<summary> 프로젝트 시작 </summary>
+<div markdown="1">
+<img width="100%" src="https://user-images.githubusercontent.com/109133448/206643332-2f8bf8ba-5cdc-4b94-acfd-3464524f7d04.gif">
+</div>
+</details>
+   
+   
+<details>
+<summary> 프로젝트 디테일 </summary>
+<div markdown="1">
+<img width="100%" src="https://user-images.githubusercontent.com/109133448/206643452-993ab98e-931f-4977-bd67-4cd2ef58bbd8.gif">
 </div>
 </details>
 
-
 <details>
-<summary> 포인트 충전 </summary>
+<summary> 프로젝트 종료 </summary>
 <div markdown="1">
-<img width="100%" src="https://user-images.githubusercontent.com/109133448/206632586-25e34de8-c3c5-40fd-99da-e0ff4b16b250.gif">
+<img width="100%" src="https://user-images.githubusercontent.com/109133448/206643655-e4cfb74c-7d31-4da3-ac8c-4bdf9d8cf58d.gif">
 </div>
 </details>
