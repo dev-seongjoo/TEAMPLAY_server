@@ -21,7 +21,19 @@ ___
 <img width="100%" src="https://user-images.githubusercontent.com/109133448/206630933-73bc26d4-c44a-465f-8d2c-695362502c8b.jpg">
 
 ___   
-
+   
+### 📄 플로우 차트
+    
+#### Back End   
+<img width="100%" src="https://user-images.githubusercontent.com/109133448/206646619-382e325d-3493-4fb2-9bc3-5d2be0509be7.png">
+    
+ ___
+    
+### 📁 ERD
+<img width="100%" src="https://user-images.githubusercontent.com/109133448/206646877-0c46034e-7f8b-485d-97bf-d704a120cd2a.png">
+   
+___
+   
 ### ☝️ 주요 기능
 
 <details>
@@ -104,6 +116,8 @@ ___
 <img width="100%" src="https://user-images.githubusercontent.com/109133448/206643655-e4cfb74c-7d31-4da3-ac8c-4bdf9d8cf58d.gif">
 </div>
 </details>
+   
+___
    
 ## 🔧 기술 스택
 ### 💻 프론트엔드
